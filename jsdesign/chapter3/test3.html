@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+      // var是函数作用域 let是块作用域
+      if (true) {
+        var name = "hello";
+        console.log(name);
+      }
+      console.log(name);
+
+      // if (true) {
+      //   let name2 = "hello2";
+      //   console.log(name2);
+      // }
+      // console.log(name2);
+
+      if (true) {
+        const name3 = "hello3";
+        console.log(name3);
+      }
+      console.log(name3);
+    </script>
+
+</body>
+</html>

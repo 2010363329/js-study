@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+</head>
+<body>
+
+    <script>
+        // 会出错
+        // function test() {
+        //     var str = "000";
+        // }
+        // test();
+        // console.log(str);
+
+        // 不会出错
+        function test2() {
+            str = "222";
+        }
+        test2();
+        console.log(str);
+
+        let message = "hello";
+        console.log(typeof message)
+        message = 10;
+
+        var yzs;
+        console.log(typeof yzs)
+    </script>
+
+</body>
+</html>
