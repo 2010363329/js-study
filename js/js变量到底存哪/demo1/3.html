@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试let作用域</title>
+</head>
+<body>
+
+    <!-- 
+        Window { ... } // 这里的内容取决于当前窗口的环境
+        首先，代码声明了一个使用 let 关键字声明的变量 a 并将其赋值为 10。然后，代码打印了变量 a 的值，这会输出 10。
+        接下来，代码打印了 window.a 和 window["a"]。
+        由于使用 let 声明的变量 a 是在块级作用域中声明的，所以它不会成为全局变量，也不会成为 window 对象的属性。
+        因此，window.a 和 window["a"] 都会输出 undefined。
+        最后，代码打印了 window 对象本身。这会输出 Window { ... }，其中的内容取决于当前窗口的环境。
+        Window 对象是浏览器中表示窗口的内置对象。
+     -->
+
+    <script>
+        let a = 10;
+        debugger;
+        console.log(a); //10
+        console.log(window.a); //undefined
+        console.log(window["a"]); //undefined
+        console.log(window);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+        1-5demo讲解:https://blog.csdn.net/bearandqiqi/article/details/122797936
+     -->
+
+     <!-- 
+        为什么会有这种差异？其实也是js引擎底层瞒着我们悄悄做了处理： var a=10声明的变量，底层会设置a属性的configurable特性为false，
+        意为禁止用delete删除。
+        而window.a添加的全局变量，底层不会自动设置a的configurable特性为false，默认为true，意为可用随意删除。
+        使用Object.getOwnPropertyDescriptor(window, "a")，可查看window对象中a的configurable特性，来确定a是否可用delete删除。
+      -->
+
+    <script>
+        // 删不掉
+        // var a=10;
+        // delete window.a; 
+        // console.log(window);
+
+        // 删的掉
+        window.a = 10;
+        console.log(window);
+        // delete window.a; 
+    </script>
+    
+</body>
+</html>

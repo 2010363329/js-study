@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试:js变量到底存哪儿</title>
+</head>
+<body>
+
+    <!-- 
+        首先，代码声明了一个变量 a 并将其赋值为 10。然后，代码打印了变量 a 的值，这会输出 10。
+        接下来，代码打印了 window.a 和 window["a"]。window 是 JavaScript 中的全局对象，
+        它包含了当前窗口中所有的变量和函数。由于变量 a 是在全局作用域中声明的，所以它是 window 对象的属性之一。
+        因此，window.a 和 window["a"] 都会输出变量 a 的值，也就是 10。
+        最后，代码打印了 window 对象本身。这会输出 Window { ... }，其中的内容取决于当前窗口的环境。
+        Window 对象是浏览器中表示窗口的内置对象。 
+    -->
+
+    <script>
+        var a = 10;
+        console.log(a);//10
+        console.log(window.a); //10
+        console.log(window["a"]); //10
+        console.log(window);
+    </script>
+    
+</body>
+</html>
